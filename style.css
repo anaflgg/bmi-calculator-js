@@ -72,3 +72,77 @@ button:hover {
     background-color: #4b1daf;
 }
 
+.modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.modal-overlay.aberto {
+    display: flex;
+}
+
+.modal-box {
+    position: relative;
+    border-radius: 1.5rem;
+    padding: 2.5rem 2rem 2rem;
+    width: 90%;
+    max-width: 340px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: center;
+    color: white;
+}
+
+.modal-box.abaixo-peso {
+    background: #1a3a2a;
+}
+
+.modal-box.peso-normal {
+    background: #1a3d1a;
+}
+
+.modal-box.sobrepeso {
+    background: #3a3010;
+}
+
+.modal-box.obesidade {
+    background: #3a1e10;
+}
+
+.fechar {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 0.8rem;
+    margin-top: 0;
+    padding: 0;
+}
+
+.modal-emoji {
+    font-size: 3rem;
+}
+
+.modal-imc {
+    font-size: 1.8rem; font-weight: 700;
+}
+
+.modal-resultado {
+    font-size: 1rem; color: rgba(255,255,255,0.8);
+}
+
+

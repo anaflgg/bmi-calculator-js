@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>IMC Calculator</title>
 </head>
+
 <body>
     <main class="container">
 
@@ -24,8 +26,16 @@
         <div class="resultado" id="resultado"></div>
     </main>
 
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal-box">
+            <button class="fechar" id="fechar" onclick="fecharModal()">X</button>
+            <p class="modal-emoji" id="modal-emoji"></p>
+            <p class="modal-imc" id="modal-imc"></p>
+            <p class="modal-resultado" id="modal-resultado"></p>
+        </div>
     </div>
 
     <script src="script.js"></script>
 </body>
+
 </html>
