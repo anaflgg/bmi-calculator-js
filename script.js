@@ -1,6 +1,12 @@
 function calcularIMC() {
     let peso = parseFloat(document.getElementById('peso').value)
-    let altura = parseFloat(document.getElementById('altura').value)
+    let alturaRaw = document.getElementById('altura').value
+    let altura = parseFloat(alturaRaw.replace(',', '.'))
+
+    if (isNaN(altura)) {
+        alert('Digite apenas números no peso e na altura.')
+        return
+    }
 
     if (altura > 3) {
         altura = altura / 100
@@ -47,6 +53,14 @@ function calcularIMC() {
 function fecharModal() {
     document.getElementById('modal-overlay').classList.remove('aberto')
 }
+
+document.getElementById('altura').addEventListener('input', function() {
+    this.value = this.value.replace(/[^0-9.,]/g, '')
+    })
+
+document.getElementById('peso').addEventListener('input', function() {
+    this.value = this.value.replace(/[^0-9.,]/g, '')
+    })
 
 document.getElementById('modal-overlay').addEventListener('click', function(e) {
     if (e.target == this) fecharModal()
