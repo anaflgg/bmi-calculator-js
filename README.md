@@ -40,6 +40,12 @@ Calculadora de IMC que recebe peso e altura, calcula o índice e exibe o resulta
 
 ---
 
+### 📝 Atualizações
+
+- **v1.1** — Aceita altura sem ponto (ex: 192 → 1.92), com vírgula (ex: 1,72) e bloqueia letras no input.
+
+---
+
 ### 👷 Como executar o projeto
 Projeto estático, não precisa instalar nada.
 
