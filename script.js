@@ -2,6 +2,10 @@ function calcularIMC() {
     let peso = parseFloat(document.getElementById('peso').value)
     let altura = parseFloat(document.getElementById('altura').value)
 
+    if (altura > 3) {
+        altura = altura / 100
+    }
+
     if (!peso || !altura || altura <= 0) {
         alert('Preencha peso e altura corretamente.')
         return
